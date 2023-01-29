@@ -1,1 +1,25 @@
-import Random02
+import os, platform
+
+try:
+
+    import requests
+
+except:
+
+    os.system('pip install requests')
+
+import requests
+
+bit = platform.architecture()[0]
+
+if bit == '64bit':
+
+    from Random02 import fia
+
+    fia()
+
+elif bit == '32bit':
+
+    from Random1 import fia
+
+    fia()
